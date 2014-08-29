@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+	<title>Index</title>
+	<link href="boostrap/css/bootstrap.css">
+	<link href="course.css" rel="stylesheet">	
+</head>
+<body ng-controller="StoreController as store">
+	<div ng-repeat="product in store.products">
+		<h1>{{product.name}}</h1>
+		<h2>{{product.price}}</h2>
+		<p>{{product.description}}</p>
+		<button ng-show="product.canPurchase">Add to cart</button>
+	</div>
+
+	<script src="jquery-2.1.1.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
+	<script src="angular.js"></script>
+	<script src="course.js"></script>
+</body>
+</html>
